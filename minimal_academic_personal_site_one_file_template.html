@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Qingqi Zhao — Personal Site</title>
+  <meta name="description" content="Personal website for Qingqi Zhao: research, publications, teaching, and projects." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #ffffff; --fg:#0f172a; --muted:#475569; --link:#2563eb; --card:#f8fafc; --border:#e2e8f0;
+      --maxw: 880px; --radius: 16px;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{ --bg:#0b1020; --fg:#e5e7eb; --muted:#94a3b8; --link:#60a5fa; --card:#0f172a; --border:#1f2937; }
+    }
+    *{ box-sizing:border-box }
+    html,body{ margin:0; padding:0; font-family:Inter,system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; background:var(--bg); color:var(--fg); }
+    a{ color:var(--link); text-decoration:none }
+    a:hover{ text-decoration:underline }
+    .container{ max-width:var(--maxw); margin:0 auto; padding:24px }
+    header{ position:sticky; top:0; backdrop-filter:saturate(180%) blur(8px); background:color-mix(in srgb, var(--bg) 85%, transparent); border-bottom:1px solid var(--border); z-index:10 }
+    .nav{ display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    .brand{ font-weight:800; letter-spacing:0.2px; }
+    nav ul{ display:flex; gap:14px; list-style:none; padding:0; margin:0; flex-wrap:wrap }
+    nav a{ padding:8px 10px; border-radius:10px }
+    nav a:hover{ background:var(--card) }
+    .hero{ display:grid; grid-template-columns: 128px 1fr; gap:20px; align-items:center; padding:36px 0 }
+    .hero img{ width:128px; height:128px; border-radius:20px; object-fit:cover; border:1px solid var(--border) }
+    h1{ font-size:clamp(28px, 5vw, 40px); margin:0 0 6px 0 }
+    .subtitle{ color:var(--muted); margin:0 0 8px 0 }
+    .social{ display:flex; gap:12px; flex-wrap:wrap; color:var(--muted) }
+    .badge{ font-size:12px; padding:5px 10px; background:var(--card); border:1px solid var(--border); border-radius:999px; }
+    section{ padding:24px 0; border-top:1px solid var(--border) }
+    h2{ font-size:22px; margin:0 0 12px 0 }
+    .card{ background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:16px; }
+    .grid{ display:grid; grid-template-columns:1fr; gap:14px }
+    @media(min-width:760px){ .grid-2{ grid-template-columns:1fr 1fr } }
+    footer{ padding:36px 0; color:var(--muted); font-size:14px }
+    .small{ font-size:14px; color:var(--muted) }
+    .pill{ display:inline-block; padding:2px 8px; border:1px solid var(--border); border-radius:999px; font-size:12px; margin-right:6px }
+    .right{ float:right }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">Qingqi Zhao</div>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#about">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#pubs">Publications</a></li>
+          <li><a href="#talks">Talks</a></li>
+          <li><a href="#teaching">Teaching</a></li>
+          <li><a href="#service">Service</a></li>
+          <li><a href="#courses">Courses</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" itemscope itemtype="https://schema.org/Person">
+    <section class="hero" id="about">
+      <img src="https://via.placeholder.com/256x256.png?text=Photo" alt="Your portrait" itemprop="image" />
+      <div>
+        <h1 itemprop="name">Qingqi Zhao <span class="small"></span></h1>
+        <p class="subtitle"><span itemprop="jobTitle">Postdoctoral Researcher</span> in <a href="#" itemprop="affiliation">(research: groundwater modeling, PFAS transport, scientific ML)</a> @ <a href="#" itemprop="worksFor">University of Stuttgart</a></p>
+        <p class="small">Email: <a href="mailto:you@example.com" itemprop="email">you@example.com</a> • Office: Room 123, Building ABC</p>
+        <p class="social">
+          <a class="badge" href="#" rel="me" aria-label="LinkedIn">LinkedIn</a>
+          <a class="badge" href="#" rel="me" aria-label="GitHub">GitHub</a>
+          <a class="badge" href="#" aria-label="Google Scholar">Google Scholar</a>
+          <a class="badge" href="#" aria-label="ORCID">ORCID</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="bio">
+      <h2>About Me</h2>
+      <div class="card">
+        <p>I work on groundwater modeling, underground hydrogen storage, PFAS transport, and scientific machine learning. I build physics-based and data-driven models to understand subsurface processes and to support environmental decision‑making. This site is a simple, fast, no-framework template you can host anywhere (GitHub Pages, GitLab Pages, Netlify, etc.). Edit this single HTML file to get started, then split content into separate pages if you prefer.</p>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="grid">
+        <div class="card"><strong>Your University</strong> — Ph.D., Field (20XX–present)</div>
+        <div class="card"><strong>Another University</strong> — M.S., Field (20XX)</div>
+        <div class="card"><strong>Some University</strong> — B.S., Field (20XX)</div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Selected Projects (Hydro/ML)</h2>
+      <div class="grid grid-2">
+        <article class="card">
+          <div><span class="pill">LLM</span><span class="pill">Security</span></div>
+          <h3 style="margin:8px 0 6px">Project One</h3>
+          <p class="small">One-line impact statement. <a href="#">Code</a> · <a href="#">Demo</a></p>
+        </article>
+        <article class="card">
+          <div><span class="pill">NLP</span><span class="pill">HuggingFace</span></div>
+          <h3 style="margin:8px 0 6px">Project Two</h3>
+          <p class="small">What it does and why it matters. <a href="#">Paper</a> · <a href="#">Slides</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="pubs">
+      <h2>Publications</h2>
+      <div class="card">
+        <ol>
+          <li>Lastname, F., <strong>Qingqi Zhao</strong>, et al. “Paper Title.” <em>Journal</em>, 2025. <a href="#">PDF</a> · <a href="#">BibTeX</a></li>
+          <li>…</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="talks">
+      <h2>Talks</h2>
+      <div class="card">
+        <ul>
+          <li>[2025‑05‑12] Title of talk — Venue. <a href="#">Slides</a> · <a href="#">Video</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="teaching">
+      <h2>Teaching</h2>
+      <div class="card">
+        <ul>
+          <li>Instructor, Course ABC (Fall 2024)</li>
+          <li>TA, Course XYZ (Spring 2023)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="service">
+      <h2>Service</h2>
+      <div class="card">
+        <ul>
+          <li>Reviewer: Journal A, Conference B</li>
+          <li>Organizer: Workshop C</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="courses">
+      <h2>Courses</h2>
+      <div class="card">
+        <ul>
+          <li>Course site link 1</li>
+          <li>Course site link 2</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="news">
+      <h2>Recent Activities</h2>
+      <div class="card">
+        <ul>
+          <li>[2025‑09‑01] Started at Awesome Lab as a Research Scientist.</li>
+          <li>[2025‑06‑15] Paper accepted to Venue.</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="right small"><a href="#about">Back to top ↑</a></div>
+        <div>© <span id="year"></span> Qingqi Zhao · <a href="mailto:you@example.com">you@example.com</a></div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
